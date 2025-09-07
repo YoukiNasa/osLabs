@@ -1,6 +1,6 @@
 # C
 *.o
-
+*.swp
 # Python
 **/__pycache__/
 *.pyc
