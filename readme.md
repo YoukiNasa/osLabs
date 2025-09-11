@@ -1,14 +1,6 @@
-#### Codes used in my Operating System class
+### Codes used in my Operating System class
 
-The source files are organized into folders `c[x]` by chapters and 'lab[x]' for Labs.
-
-#### Labs
-Folders for files/materials used in the Labs
-##### lab1
-+ `templates.md`: tempalte for writing the report of the assignment. 
-+ `students_v1` and `students_v2` for comparison.
-+ `c_projects`: for file processing.
-+ `linux.png`: for image processing.
+The source files are organized into folders `c[x]` by chapters and 'lab[x]' by Labs.
 
 #### c1
 + `1_hello.c`: show how computer could read binary while we coding in C
@@ -29,4 +21,11 @@ Folders for files/materials used in the Labs
     ps aux | grep cpu
     ```
 + `2_mthreads.c`: show that without OS, concurrency will bring mistakes.
+
+#### lab1
++ `templates.md`: tempalte for writing the report of the assignment. 
++ `students_v1` and `students_v2` for comparison.
++ `c_projects`: for file processing.
++ `linux.png`: for image processing.
+
 
