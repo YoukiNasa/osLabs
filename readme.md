@@ -1,24 +1,32 @@
 #### Codes used in my Operating System class
 
-The source files are organized into folders `c[x]` by chapters.
+The source files are organized into folders `c[x]` by chapters and 'lab[x]' for Labs.
 
-##### c1
+#### Labs
+Folders for files/materials used in the Labs
+##### lab1
++ `templates.md`: tempalte for writing the report of the assignment. 
++ `students_v1` and `students_v2` for comparison.
++ `c_projects`: for file processing.
++ `linux.png`: for image processing.
+
+#### c1
 + `1_hello.c`: show how computer could read binary while we coding in C
   ```bash
   gcc 1_hello.c -o 1_hello.o
   ```
-  then use `xdd` to say the binary file:
+  then use `xdd` to check the binary file:
   ```bash
   xdd 1_hello.o | less
   ```
 
 #### c2
-+ `1_concurrency_cpu.c`: show OS makes concurrency possible.
++ `1_cpu.c`: shows how OS makes concurrency possible.
     compile and then run multiples and check the process:
     ```bash
-    gcc 1_cpu.c -o 1_cpu.o
-    ./cpu A & ./1_cpu.o B &
+    gcc 1_cpu.c -o cpu.o
+    ./cpu A & ./cpu.o B &
     ps aux | grep cpu
     ```
-+ `2_mthreads.c`: show without OS, concurrency will bring mistakes.
++ `2_mthreads.c`: show that without OS, concurrency will bring mistakes.
 
