@@ -21,7 +21,11 @@ The source files are organized into folders `c[x]` by chapters and `lab[x]` by L
     ps aux | grep cpu
     kill [pid]
     ```
-+ `2_mthreads.c`: show that without OS, concurrency will bring mistakes.
++ `2_mthreads.c`: show that without OS, process concurrency will bring mistakes.
++ `3_zombie_process.py`: use `os.fork()` to create a child process to see the `X` state.
++ `4_process_state_demo`: bash commands to observe different kind of process state in Linux.
++ `5_mutual_exclusion`: demo for *locks*, *mutex*, *peterson algorithms*, etc.
++ `6_sync`: demos for *conditional variable*, *semaphores* solving *producer-consumer* problems.
 
 #### lab1
 + `templates.md`: template for writing the report of the Lab1 assignment. 
