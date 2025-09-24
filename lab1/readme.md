@@ -6,6 +6,8 @@
 1. 如果你已有Linux系统，可以直接用
 2. 如果你是Windows，
    (1) 安装wsl：Windows Subsystem Linux:
+    > 需要 Win11，其他版本(x64 系统：版本 1903 或更高版本，内部版本为 18362.1049 或更高版本), 请参阅：[手动安装wsl](https://learn.microsoft.com/zh-cn/windows/wsl/install-manual)
+
    + 以管理员身份打开命令行cmd:
      ```
      wsl --install [distro]
@@ -106,11 +108,11 @@
    ```
 8. Job 8: 每次拷贝文件时都打印"OS COPIED x bytes from [src-filename] to [dst-filename]"
     ```python
+    #sys_call_copy.py
     import os, sys
     BUFSZ = 8192
     def copy_syscalls(src, dst):
         src_fd = os.open(src, os.O_RDONLY)
-        # 0644 permissions for new file
         dst_fd = os.open(dst, os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o644)
         total = 0
         try:
@@ -127,9 +129,33 @@
 
     if __name__ == "__main__":
         if len(sys.argv)!=3:
-            print("Usage: python py_syscalls.py SRC DST"); sys.exit(2)
+            print("Usage: python sys_call_copy.py SRC DST"); sys.exit(2)
         copy_syscalls(sys.argv[1], sys.argv[2])
     ```
+    (1) 使用到的系统调用：
+    + 打开文件(获得文件描述符file descriptor)：`os.open()`
+    + 读文件:`os.read()`
+    + 写文件:`os.write()`
+    + 讲缓存内容同步到磁盘：`os.fsync()`
+    + 关闭文件(释放文件描述符)：`os.close()`
+ 
+    (2)使用到的`os.open()`的flags：
+     + `os.O_RDONLY`(0):只读
+     + `os.O_WRONLY`(1):只写
+     + `os.O_CREAT`(256):不存在则创建
+     + `os.O_TRUNC`(512):有内容则清空
+     + 其他常用flag:
+       + `os.O_RDWR` − 读和写
+       + `os.O_NONBLOCK` - 读写都不能打断，还记得Linux进程的状态**D**吗？
+       + `os.O_APPEND ` - 写时追加内容
+    
+    (3)Linux文件权限：
+    + 可写`w`：2
+    + 可读`r`：4
+    + 可运行`x`：1
+    + 用户分类：u(ser), g(roup), o(thers), a(all)
+    + 程序中`0o644`: owner: 6=可读写，group: 4(可读)，other: 4(可读)
+    + `chmod`,`chown`,`chgrp`
 
 > Why GUI? **Discoverability**, **visual feedback**, **precision with spatial manipulation**, **one-off tasks**.
 
@@ -141,5 +167,5 @@
 #### 4.Assignment
 + format: `.md` and `.pdf`
 + submitted file name: `0S_Lab1_name.md` and `0S_Lab1_name.pdf`
-+ **deadline: By the Friday of Week 5.**
++ **deadline: By the Friday of Week 5 (2025/10/03).**
 + submit to: xsun@gzhu.edu.cn, subject: Assignment-OS-Lab1

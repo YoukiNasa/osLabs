@@ -29,8 +29,13 @@ The source files are organized into folders `c[x]` by chapters and `lab[x]` by L
 
 #### lab1
 + `templates.md`: template for writing the report of the Lab1 assignment. 
-+ `students_v1.csv` and `students_v2.csv` for comparison.
++ `students_v1.csv` and `students_v2.csv` for file comparison.
 + `c_project`: for file processing jobs.
 + `linux.png`: for image processing jobs.
++ `sys_call_copy.py`: python implementation of file copy using system calls.
+
+#### lab2
++ `templates.md`: template for writing the report of the Lab2 assignment. 
++ `framework.py`: basic codes for the experiment
 
 
