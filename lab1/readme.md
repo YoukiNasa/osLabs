@@ -91,7 +91,7 @@
 5. Job 5: 裁剪一个图片的指定区域并保存为新的文件
     CLI:
 
-    `sudo apt-get install imagemagic`
+    `sudo apt-get install imagemagick`
 
     `convert raw.jpg -crop 800x460+100+20 cropped.jpg`
 
@@ -176,4 +176,5 @@
 + format: `.md` and `.pdf`
 + submitted file name: `0S_Lab1_name.md` and `0S_Lab1_name.pdf`
 + **deadline: By the Friday of Week 5 (2025/10/03).**
+
 + submit to: xsun@gzhu.edu.cn, subject: Assignment-OS-Lab1
