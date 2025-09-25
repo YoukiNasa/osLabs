@@ -13,11 +13,10 @@ class BoundedBuffer:
         item = self.buffer.pop(0)
         return item
     
-class BoundedBufferBasic:
+class BoundedBufferBasic(BoundedBuffer):
     def __init__(self, capacity: int):
-        self.capacity = capacity
+        super().__init__(capacity)
         self.count = 0
-        self.buffer: List[Any] = []
         
     def put(self, item: Any):
         raise NotImplementedError
@@ -25,22 +24,20 @@ class BoundedBufferBasic:
     def get(self) -> Any:
         raise NotImplementedError
 
-class BoundedBufferCV:
+class BoundedBufferCV(BoundedBuffer):
     def __init__(self, capacity: int):
-        self.capacity = capacity
-        self.buffer: List[Any] = []
-        
+        super().__init__(capacity)
+
     def put(self, item: Any):
         raise NotImplementedError
 
     def get(self) -> Any:
         raise NotImplementedError
 
-class BoundedBufferCV2:
+class BoundedBufferCV2(BoundedBuffer):
     def __init__(self, capacity: int):
-        self.capacity = capacity
-        self.buffer: List[Any] = []
-        
+        super().__init__(capacity)
+
     def put(self, item: Any):
         raise NotImplementedError
 
@@ -48,11 +45,10 @@ class BoundedBufferCV2:
         raise NotImplementedError
 
 
-class BoundedBufferSem:
+class BoundedBufferSem(BoundedBuffer):
     def __init__(self, capacity: int):
-        self.capacity = capacity
-        self.buffer: List[Any] = []
-        
+        super().__init__(capacity)
+
     def put(self, item: Any):
         raise NotImplementedError
 

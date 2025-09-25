@@ -90,15 +90,23 @@
 
 5. Job 5: 裁剪一个图片的指定区域并保存为新的文件
     CLI:
+
     `sudo apt-get install imagemagic`
+
     `convert raw.jpg -crop 800x460+100+20 cropped.jpg`
+
     GUI:
+
     `sudo apt-get install gthumb`
+
     `gthumb imagefile`
 
 6. Job 6: 移动同名文件是否覆盖？
+   
     GUI: `sudo apt-get install nautilus` `nautilus`
+
     CLI: `cp update_info_1.txt info/update_info_1.txt`
+    
     CLI-interactive: `cp -i`
 
 7. job 7: 从网上下载5个不同的"苹果"的图片到`~/osLabs/lab1/appels`，选择一个"看上去"最好的放入`~/osLabs/lab1/best_apple`

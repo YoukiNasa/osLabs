@@ -1,8 +1,7 @@
 ### 实验2：进程的互斥与同步
-*OS2025-2026-1 信技231 Name[ID]*
 
 #### 有限缓冲区-BoundedBuffer
-1. 基本用python实现一个boundedBuffer类，需要具有以下的功能：
+1. 用python实现一个boundedBuffer类，需要具有以下的功能：
 ```python
 class BoundedBuffer:
     def __init__(self, capacity):
@@ -19,7 +18,7 @@ class BoundedBuffer:
 + `put`操作：当缓冲区不满时，向缓冲区存入数据
 + `get`操作：当缓冲区非空时，从缓冲区读走数据
 
-2. 有错误的实现，没有任何互斥与同步机制的保证：
+2. 错误的实现，没有任何互斥与同步机制的保证：
 ```python
 class BoundedBuffer:
     def __init__(self, capacity: int):
