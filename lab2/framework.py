@@ -77,5 +77,4 @@ def demo():
     # assert num_consumed == num_produced
 
 if __name__ == "__main__":
-    # 给定生产/消费线程数, 每个线程生产/消费的item数, 计算demo耗时
     demo()
