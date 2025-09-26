@@ -62,11 +62,15 @@ for i in range(n):
     threads.append(Thread(target=producer, args=(i,)))
     threads.append(Thread(target=consumer, args=(i,)))
 ```
-+ 可以使用asset检测结果是否正确:
++ 可以使用`assert`检测结果是否正确:
 ```python
 assert len(consumed) <= len(produced)
 print("Produced:", len(produced), "Consumed:", len(consumed))
 ```
+#### 程序性能的评价
++ 使用固定的生产/消费 item 的数量$N$，计算程序运行时间$t$.
++ 使用`Throughput`吞吐量$TP$：单位时间生产/消费item的个数.
+  $$TP = \frac{N}{t}$$
 
 #### Assignment
 + format: `.py`, `.md`, and `.pdf`
