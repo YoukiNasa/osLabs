@@ -61,3 +61,9 @@ gcc name.c -o name.o -lpthread && ./name.o
 + `pro_con_cv_general.c`: a general way to use **mutex** and 1 **conditional variable** to solve the synchronization problem, i.e., `while(!condition)` and `broadcast(cv)`.
 
 + `pro_con_semaphore.c`: use **semaphore** to solve producer_consumer problem.
+
++ `philosopher_sem.c`: use **semaphore** to solve the Dinning Philosopher problem but will cause deadlock.
+ 
++ `philosopher_sem2.c`: use **semaphore** to solve the Dinning Philosopher problem with specific rules than can solve deadlock.
+  
++ `philosopher_cv.c`: use **conditional variable** to solve the Dinning Philosopher problem, a easier way compared with effective **semaphore**.

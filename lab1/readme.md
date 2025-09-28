@@ -7,14 +7,22 @@
 2. 如果你是Windows，
    (1) 安装wsl：Windows Subsystem Linux:
     > 需要 Win11，其他版本(x64 系统：版本 1903 或更高版本，内部版本为 18362.1049 或更高版本), 请参阅：[手动安装wsl](https://learn.microsoft.com/zh-cn/windows/wsl/install-manual)
-
+   
+   以下命令只对win11有效：
    + 以管理员身份打开命令行cmd:
+    ```
+    wsl.exe --list --online
+    ```
+    查看可安装的发行版distro,使用如下命令安装对应的发行版
      ```
      wsl --install [distro]
-     wsl.exe --list --online
+     ```
+     如：
+     ```
+     wsl --install Ubuntu-20.04
      ```
    + 控制面板->程序->启用/关闭Windows功能->勾选`适用于Linux的Windows子系统`
-   + 可修改为Ubuntu 配色
+   + 右键标签页标题，可修改为Ubuntu 配色
 
    （2）通过VMWare/VirtualBox 安装Linux虚拟机: 参考 4.
 3. 如果你是MacOS, unfortunately, 需要自己check what you can do and what you can not, and refer to 4.
@@ -89,9 +97,10 @@
     `diff` vs. `meld`
 
 5. Job 5: 裁剪一个图片的指定区域并保存为新的文件
+   
     CLI:
 
-    `sudo apt-get install imagemagic`
+    `sudo apt-get install imagemagick`
 
     `convert raw.jpg -crop 800x460+100+20 cropped.jpg`
 

@@ -1,4 +1,5 @@
 ### 实验2：进程的互斥与同步
+> ##### 实验目的: 理解多进程并发中同步与互斥的重要性，及其实现方式，提高并发编程的能力。
 
 #### 有限缓冲区-BoundedBuffer
 1. 用python实现一个boundedBuffer类，需要具有以下的功能：
@@ -73,6 +74,7 @@ print("Produced:", len(produced), "Consumed:", len(consumed))
   $$TP = \frac{N}{t}$$
 
 #### Assignment
++ 以`framework.py`为基础进行开发。
 + format: `.py`, `.md`, and `.pdf`
 + submitted file name: `0S_Lab2_name.py`,`0S_Lab2_name.md` and `0S_Lab2_name.pdf`
 + **deadline: By the Friday of Week 6 (2025/10/10).**
