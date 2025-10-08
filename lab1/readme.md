@@ -1,10 +1,12 @@
 ### 实验1：通过Linux感受OS
-> ##### 实验目的: 体验操作系统提供的三种接口(Interface)，并思考每种接口的最佳使用场景。
+#### 实验目的:
+1. 体验操作系统提供的三种接口(Interface): 命令行CLI，图形界面GUI，系统调用System Call
+2. 思考每种接口的最佳使用场景
 
 #### 1.准备
 + ##### wsl, 虚拟机，Linux-based系统均可
 1. 如果你已有Linux系统，可以直接用
-2. 如果你是Windows，
+2. 如果你是Windows:
    (1) 安装wsl：Windows Subsystem Linux:
     > 需要 Win11，其他版本(x64 系统：版本 1903 或更高版本，内部版本为 18362.1049 或更高版本), 请参阅：[手动安装wsl](https://learn.microsoft.com/zh-cn/windows/wsl/install-manual)
    
@@ -21,8 +23,8 @@
      ```
      wsl --install Ubuntu-20.04
      ```
-   + 控制面板->程序->启用/关闭Windows功能->勾选`适用于Linux的Windows子系统`
-   + 右键标签页标题，可修改为Ubuntu 配色
+   + 控制面板->程序->启用/关闭Windows功能->勾选`适用于Linux的Windows子系统` 和 `Hype-V`.
+   + 右键标签页标题，可修改为Ubuntu配色
 
    （2）通过VMWare/VirtualBox 安装Linux虚拟机: 参考 4.
 3. 如果你是MacOS, unfortunately, 需要自己check what you can do and what you can not, and refer to 4.
@@ -31,7 +33,7 @@
    ATSAI (AI): ask the smart (stupid) AI - 需谨慎.
 
 + ##### IDE and Tools
-1. Install `VSCode` with `python` and `markdown` extensions.
+1. Install `VSCode` with `python` and `markdown` extensions (`Markdown Preview Enhanced`,`Markdown All in One`,`Markdown PDF`).
 2. `Vim` (+ plugins) is also good if you can use it efficiently.
 
 #### 2.Linux 基础
@@ -183,6 +185,6 @@
 
 #### 4.Assignment
 + format: `.md` and `.pdf`
-+ submitted file name: `0S_Lab1_name.md` and `0S_Lab1_name.pdf`
++ submitted file name: `OS_Lab1_name.md` and `OS_Lab1_name.pdf`
 + **deadline: By the Friday of Week 5 (2025/10/03).**
 + submit to: xsun@gzhu.edu.cn, subject: Assignment-OS-Lab1

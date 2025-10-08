@@ -3,6 +3,7 @@
 The source files are organized into folders `c[x]` by chapters and `lab[x]` by Labs.
 
 #### c1
+*Introduction to OS*
 + `1_hello.c`: show how computer could read binary while we coding in C
   ```bash
   gcc 1_hello.c -o 1_hello.o
@@ -13,6 +14,7 @@ The source files are organized into folders `c[x]` by chapters and `lab[x]` by L
   ```
 
 #### c2
+*Process Description and Control*
 + `1_cpu.c`: shows how OS makes concurrency possible.
     compile and then run multiples and check/kill the process:
     ```bash
@@ -23,12 +25,13 @@ The source files are organized into folders `c[x]` by chapters and `lab[x]` by L
     ```
 + `2_mthreads.c`: show that without OS, process concurrency will bring mistakes.
 + `3_zombie_process.py`: use `os.fork()` to create a child process to see the `X` state.
-+ `4_process_state_demo`: bash commands to observe different kind of process state in Linux.
-+ `5_mutual_exclusion`: demo for *locks*, *mutex*, *peterson algorithms*, etc.
-+ `6_sync`: demos for *conditional variable*, *semaphores* solving *producer-consumer* problems.
-+ `7_communication`: demos for process communication.
++ `4_process_state_demo/`: bash commands to observe different kind of process state in Linux.
++ `5_mutual_exclusion/`: demo for *locks*, *mutex*, *peterson algorithms*, etc.
++ `6_sync/`: demos for *conditional variable*, *semaphores* solving *producer-consumer* problems.
++ `7_communication/`: demos for process communication.
 
-#### lab1
+#### lab1 
+*OS interface of Linux*
 + `templates.md`: template for writing the report of the Lab1 assignment. 
 + `students_v1.csv` and `students_v2.csv` for file comparison.
 + `c_project`: for file processing jobs.
@@ -36,7 +39,13 @@ The source files are organized into folders `c[x]` by chapters and `lab[x]` by L
 + `sys_call_copy.py`: python implementation of file copy using system calls.
 
 #### lab2
+*Mutual exclusion and synchronization*
 + `templates.md`: template for writing the report of the Lab2 assignment. 
 + `framework.py`: basic codes for the experiment
+
+#### lab3
+*CPU simulating and program running*
++ `templates.md`: template for writing the report of the Lab2 assignment. 
++ `framework/`: basic codes for the experiment
 
 
