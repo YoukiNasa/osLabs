@@ -26,9 +26,10 @@ The source files are organized into folders `c[x]` by chapters and `lab[x]` by L
 + `2_mthreads.c`: show that without OS, process concurrency will bring mistakes.
 + `3_zombie_process.py`: use `os.fork()` to create a child process to see the `X` state.
 + `4_process_state_demo/`: bash commands to observe different kind of process state in Linux.
-+ `5_mutual_exclusion/`: demo for *locks*, *mutex*, *peterson algorithms*, etc.
++ `5_mutual_exclusion/`: demos for *locks*, *mutex*, *peterson algorithms*, etc.
 + `6_sync/`: demos for *conditional variable*, *semaphores* solving *producer-consumer* problems.
 + `7_communication/`: demos for process communication.
++ `8_threads/`: demos for threads.
 
 #### lab1 
 *OS interface of Linux*
