@@ -46,7 +46,7 @@ The source files are organized into folders `c[x]` by chapters and `lab[x]` by L
 
 #### lab3
 *CPU simulating and program running*
-+ `templates.md`: template for writing the report of the Lab2 assignment. 
++ `templates.md`: template for writing the report of the Lab3 assignment. 
 + `framework/`: basic codes for the experiment
 
 

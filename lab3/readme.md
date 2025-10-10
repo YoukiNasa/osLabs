@@ -116,13 +116,13 @@ class OperatingSystem:
         pass
 ```
 #### 4. Assignment
-+ 以`framework/`中的代码为基础进行开发，编写汇编实现斐波那契数的保存：
++ 以`framework/`中的代码为基础进行开发，编写汇编实现斐波那契数的打印：
   + TIPS: 
-    + 需要用到循环，所以要实现**跳转指令**，并注意使用程序计数器PC的`set(value)`方法
+    + 需要用到循环，所以要实现**跳转指令**，并注意使用程序计数器PC的`set(value)`方法实现指令的跳转执行。
     + 需要打印，可以设置一个简易的打印指令：`PRINT`，打印`ACC`中的值。（实际中打印到终端需要调用IO接口比较复杂）
   + 修改`asm.py`文件：添加新的指令
-  + 修改`cpu.py`文件：添加新的机器指令`xxx`并实现`self._xxx(self)`，需要和`asm.py`中的对应，在`pass`处实现方法对应的功能
+  + 修改`cpu.py`文件：添加新的机器指令`xxx`并实现`self._xxx(self)`，需要和`asm.py`中的对应；在`pass`处实现方法对应的功能
   + 修改`pyos.py`文件：添加必要的代码，并在`pass`处实现方法对应的功能
-+ 提交一个压缩包`OS_Lab3_name.zip`，内容包括：修改后的`asm.py`,`cpu.py`,`pyos.py`以及一个汇编文件`fibonacci.asm`实现打印斐波那契数字；
++ 提交一个压缩包`OS_Lab3_name.zip`，内容包括：修改后的`asm.py`,`cpu.py`,`pyos.py`以及一个汇编文件`fibonacci.asm`实现打印斐波那契数字，还有实验报告：`OS_Lab3_name.md`(基于`lab3/templates.md`完成) 和 `OS_Lab3_name.pdf`(由`OS_Lab3_name.md`生成)；
 + **deadline: By the Friday of Week 8 (2025/10/24).**
 + submit to: xsun@gzhu.edu.cn, subject(邮件主题): Assignment-OS-Lab3
