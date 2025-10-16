@@ -31,6 +31,10 @@ The source files are organized into folders `c[x]` by chapters and `lab[x]` by L
 + `7_communication/`: demos for process communication.
 + `8_threads/`: demos for threads.
 
+#### c3
+*Scheduling and Deadlock*
++ `1_schedule`: implementation of the job/process/realtime scheduling algorithms and their analysis
+
 #### lab1 
 *OS interface of Linux*
 + `templates.md`: template for writing the report of the Lab1 assignment. 

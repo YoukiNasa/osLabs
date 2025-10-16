@@ -19,7 +19,8 @@
     ```bash
     top -Hp pid
     ```
-+ check the TCB (thread control block) in Linux (1 to 1 implementation):
++ check the TCB (thread control block) in Linux 
     ```shell
     cat /proc/<pid>/task/<tid>/status
     ```
+    1 to 1 implementation: 1 user level thread (ULT) corresponds to 1 kernel support thread (KST)
