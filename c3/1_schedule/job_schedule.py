@@ -13,7 +13,7 @@ class Job:
 def simulate(tasks: List[Job], policy: str):
     t = 0; 
     # sorted by arrival time
-    pending = sorted(tasks, key=lambda x:x.arrive); 
+    pending = sorted(tasks, key=lambda x:x.arrive)
     ready=[]
     gantt=[]
     def admit():
@@ -40,8 +40,9 @@ def simulate(tasks: List[Job], policy: str):
 
 if __name__ == "__main__":
     # Example usage
-    tasks = [Job("P0",0,5), Job("P1",0,3), Job("P2",2,4)]
-    gantt = simulate(tasks, "SJF")
+    tasks = [Job("P0",0,5), Job("P1",1,5), Job("P2",2,2)]
+    # tasks = [Job("P0",0,5,2), Job("P1",0,3,0), Job("P2",2,4,1)]
+    gantt = simulate(tasks, "HRRN")
     
     arrivals = {j.name:j.arrive for j in tasks}
     total = sum(j.svc for j in tasks)

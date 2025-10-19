@@ -1,8 +1,8 @@
 ### Threads
 
 #### When we need multiple threads to keep good user response
-+ gui-io.py: without threads, the GUI frozen!
-+ gui-io-threads.py: with threads, the GUI keeps responsive!
++ `gui-io.py`: without threads, the GUI frozen!
++ `gui-io-threads.py`: with threads, the GUI keeps responsive!
 
 #### Inspect the threads in Linux
 + check the threads states when they are running:

@@ -88,6 +88,7 @@ def simulate_preemptive_jobs(
             seg_start = None
 
     # Normalize: collapse adjacent identical segments
+    # ['A',0,2], ['A',2,5]  =>  ['A',0,5]
     collapsed = []
     for n, s, e in gantt:
         if not collapsed:
@@ -106,7 +107,7 @@ def simulate_preemptive_jobs(
 
 
 if __name__ == "__main__":
-    workload = [Job("A",0,5,2), Job("B",1,3,1), Job("C",2,4,3)]
+    workload = [Job("P0",0,5,2), Job("P1",1,3,1), Job("P2",2,4,3)]
     pol = "SRTF"
     g, info = simulate_preemptive_jobs(workload, policy=pol, aging_per_tick=0.2)
     plot_gantt(g, f"Preemptive job scheduling: {pol}")
