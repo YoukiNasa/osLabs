@@ -107,7 +107,7 @@ def simulate_preemptive_jobs(
 
 
 if __name__ == "__main__":
-    workload = [Job("P0",0,5,2), Job("P1",1,3,1), Job("P2",2,4,3)]
+    workload = [Job("P0",0,5,2), Job("P1",1,2,1), Job("P2",2,2,3)]
     pol = "SRTF"
     g, info = simulate_preemptive_jobs(workload, policy=pol, aging_per_tick=0.2)
     plot_gantt(g, f"Preemptive job scheduling: {pol}")

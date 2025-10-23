@@ -46,7 +46,7 @@ def plot_gantt(gantt: List[Tuple[str,int,int]], title: str):
 if __name__ == "__main__":
     # Example usage
     # example_gantt = [("P0",0,5),("P1",5,8),("P2",8,12)]
-    example_gantt = [("P0",0,1),("P1",1,4),("P0",4,8),("P2",8,12)]
+    example_gantt = [("P0",0,2),("P2",2,4),("P0",4,7),("P1",7,9)]
     arrivals = {"P0":0,"P1":1,"P2":2}
     metrics, per_job = metrics_gantt(example_gantt, arrivals)
     print("Metrics:", metrics)

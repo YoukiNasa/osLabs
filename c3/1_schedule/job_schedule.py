@@ -40,9 +40,9 @@ def simulate(tasks: List[Job], policy: str):
 
 if __name__ == "__main__":
     # Example usage
-    tasks = [Job("P0",0,5), Job("P1",1,5), Job("P2",2,2)]
+    tasks = [Job('P1',0,4), Job('P2',1,4), Job('P3',2,3),Job('P4',5,3)]
     # tasks = [Job("P0",0,5,2), Job("P1",0,3,0), Job("P2",2,4,1)]
-    gantt = simulate(tasks, "HRRN")
+    gantt = simulate(tasks, "SJF")
     
     arrivals = {j.name:j.arrive for j in tasks}
     total = sum(j.svc for j in tasks)
